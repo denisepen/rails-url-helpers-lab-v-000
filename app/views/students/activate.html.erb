@@ -1,7 +1,7 @@
 
 <form>
-  <input type="radio" name="active" value="@student.active" checked > Active<br>
-  <input type="radio" name="active" value="@student.active" > Inactive<br>
+  <input type="radio" name="active" value="true" checked > Active<br>
+  <input type="radio" name="active" value="false" > Inactive<br>
 </form>
 
  <%= link_to @student.to_s, student_path(@student) %>
