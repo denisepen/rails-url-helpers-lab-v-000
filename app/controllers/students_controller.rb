@@ -12,9 +12,9 @@ class StudentsController < ApplicationController
   def active
     @student=Student.find(params[:id])
     if @student.active == true
-      @student.active = active
+      @student.active = "active"
     else
-      @student.active = inactive
+      @student.active = "inactive"
     end
   end
 
