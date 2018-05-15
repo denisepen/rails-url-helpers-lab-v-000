@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
     end
     @student.activate
 
-  
+
   end
 
   private
