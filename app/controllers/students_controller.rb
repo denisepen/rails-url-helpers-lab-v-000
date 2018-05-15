@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
     if params[:name] == true
       @student.active = "true"
     else
-      @student.active == "false"
+      @student.active = "false"
     end
   end
 
