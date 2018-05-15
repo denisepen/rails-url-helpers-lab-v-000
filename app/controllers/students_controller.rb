@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
       @student.active = "false"
     end
 
-    render "/students/show"
+    render "/students/show", as: "/students/:id"
   end
 
   private
