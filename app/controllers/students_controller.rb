@@ -10,6 +10,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
+    binding.pry
     @student=Student.find(params[:id])
     if params[:name] == true
       @student.active = "true"
@@ -18,7 +19,7 @@ class StudentsController < ApplicationController
     end
     @student.activate
 
-    render "/students/show", as: "/students/:id"
+  
   end
 
   private
