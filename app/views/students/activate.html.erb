@@ -2,8 +2,6 @@
 <form method="post" action="<%= students_path(@student)%>">
 
   <input type="radio" id = "true" name="active" value= "<%= @student.active %>"/> Active<br>
-  <input type="radio" id= "false" name="active" value="<%= @student.active %>" /> Inactive<br>
+  <input type="radio" id= "false" name="active" value="<%= !@student.active %>" /> Inactive<br>
   <input type="submit" name="" value="">
 </form>
-
-
