@@ -1,8 +1,11 @@
 
-<form method="post" action="<%= student_path(@student)%>">
-<%= collection_radio_buttons(:post, :status_id, Status.all, :id, :name) %>
-  <input type="radio" id = "true" name="active" value= "<%= @student.active %>"/> Active<br>
-  <input type="radio" id= "false" name="active" value="<%= !@student.active %>" /> Inactive<br>
-  <input type="submit" name="" value="">
-</form>
+<% if @student.active %>
+<h1>  "This student is active" </h1>
+<% else %>
+<h1>The student is inactive</h1>
+<% end %>
+
+
+<%= link_to '<button type="button">Change Status</button> , new_post_path %>
+
 
