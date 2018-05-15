@@ -16,6 +16,8 @@ class StudentsController < ApplicationController
     else
       @student.active = "false"
     end
+
+    render "/students/show"
   end
 
   private
