@@ -10,16 +10,10 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    binding.pry
-    @student=Student.find(params[:id])
-    if params[:name] == true
-      @student.active = "true"
-    else
-      @student.active = "false"
-    end
-    @student.activate
-
-
+    @student = Student.find(params[:id])
+    @student.active = !@student.active 
+    @student.save
+    redirect_to student_path(@student)
   end
 
   private
