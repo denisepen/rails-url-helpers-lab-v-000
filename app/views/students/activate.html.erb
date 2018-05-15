@@ -2,7 +2,7 @@
 <form>
   <input type="radio" id = "true" name="active" value= "<%= @student.active %>"/> Active<br>
   <input type="radio" id= "false" name="active" value="<%= @student.active %>" /> Inactive<br>
-   
+
 </form>
 
  <%= link_to @student.to_s, students_path(@student) %>
